@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/aichat/static/css/main.dc128104.css",
-    "main.js": "/aichat/static/js/main.e5ef0b0d.js",
+    "main.js": "/aichat/static/js/main.c5a561eb.js",
     "static/js/787.28c29e08.chunk.js": "/aichat/static/js/787.28c29e08.chunk.js",
     "index.html": "/aichat/index.html",
+    "static/media/streams.cjs": "/aichat/static/media/streams.4f77198d6d5a35eabcf8.cjs",
     "main.dc128104.css.map": "/aichat/static/css/main.dc128104.css.map",
-    "main.e5ef0b0d.js.map": "/aichat/static/js/main.e5ef0b0d.js.map",
+    "main.c5a561eb.js.map": "/aichat/static/js/main.c5a561eb.js.map",
     "787.28c29e08.chunk.js.map": "/aichat/static/js/787.28c29e08.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dc128104.css",
-    "static/js/main.e5ef0b0d.js"
+    "static/js/main.c5a561eb.js"
   ]
 }
