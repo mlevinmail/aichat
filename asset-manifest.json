@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mlevinmail/aichat/static/css/main.dc128104.css",
-    "main.js": "/mlevinmail/aichat/static/js/main.6205b9a7.js",
-    "static/js/787.28c29e08.chunk.js": "/mlevinmail/aichat/static/js/787.28c29e08.chunk.js",
-    "index.html": "/mlevinmail/aichat/index.html",
-    "main.dc128104.css.map": "/mlevinmail/aichat/static/css/main.dc128104.css.map",
-    "main.6205b9a7.js.map": "/mlevinmail/aichat/static/js/main.6205b9a7.js.map",
-    "787.28c29e08.chunk.js.map": "/mlevinmail/aichat/static/js/787.28c29e08.chunk.js.map"
+    "main.css": "/aichat/static/css/main.dc128104.css",
+    "main.js": "/aichat/static/js/main.b8f63698.js",
+    "static/js/787.28c29e08.chunk.js": "/aichat/static/js/787.28c29e08.chunk.js",
+    "index.html": "/aichat/index.html",
+    "main.dc128104.css.map": "/aichat/static/css/main.dc128104.css.map",
+    "main.b8f63698.js.map": "/aichat/static/js/main.b8f63698.js.map",
+    "787.28c29e08.chunk.js.map": "/aichat/static/js/787.28c29e08.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dc128104.css",
-    "static/js/main.6205b9a7.js"
+    "static/js/main.b8f63698.js"
   ]
 }
