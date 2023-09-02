@@ -11,12 +11,20 @@ const Transcriber = () => {
     const [stream, setStream] = useState(null);
     const chat = useRef(new OpenAIChat());
     // apikey var
-    const [apiKey, setApiKey] = useState('');
-
+    const [apiKey, setApiKey] = useState(() => {
+        // Load the apiKey from localStorage during initial state setup
+        return localStorage.getItem('apiKey') || '';
+    });
     useEffect(() => {
         const textarea = document.getElementById("conversationTrail");
         textarea.scrollTop = textarea.scrollHeight;
     }, [conversationTrail]);
+
+    useEffect(() => {
+        // This effect ensures the apiKey is always up to date in the local storage.
+        // Whenever the apiKey state changes, it updates the value in local storage.
+        localStorage.setItem('apiKey', apiKey);
+    }, [apiKey]);
 
     const toggleRecording = () => {
         if (!isRecording) {
@@ -101,8 +109,7 @@ const Transcriber = () => {
 
     return (
         <div className="transcriber-container">
-            <input type="text" value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="Enter your API key" />
-            <select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)}>
+            <input type="text" value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="Enter your API key" />            <select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)}>
                 <option value="en-US">English (US)</option>
                 <option value="ru-RU">Russian</option>
                 <option value="uk-UA">Ukrainian</option>
