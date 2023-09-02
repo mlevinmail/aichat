@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mlevinmail/aichat/static/css/main.dc128104.css",
+    "main.js": "/mlevinmail/aichat/static/js/main.e25f70a3.js",
+    "static/js/787.28c29e08.chunk.js": "/mlevinmail/aichat/static/js/787.28c29e08.chunk.js",
+    "index.html": "/mlevinmail/aichat/index.html",
+    "main.dc128104.css.map": "/mlevinmail/aichat/static/css/main.dc128104.css.map",
+    "main.e25f70a3.js.map": "/mlevinmail/aichat/static/js/main.e25f70a3.js.map",
+    "787.28c29e08.chunk.js.map": "/mlevinmail/aichat/static/js/787.28c29e08.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc128104.css",
+    "static/js/main.e25f70a3.js"
+  ]
+}
