@@ -9,7 +9,9 @@ const Transcriber = () => {
     const mediaRecorder = useRef(null);
     const audioChunks = useRef([]);
     const [stream, setStream] = useState(null);
-    const chat = useRef(new OpenAIChat('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'));
+    const chat = useRef(new OpenAIChat());
+    // apikey var
+    const [apiKey, setApiKey] = useState('');
 
     useEffect(() => {
         const textarea = document.getElementById("conversationTrail");
@@ -51,6 +53,7 @@ const Transcriber = () => {
     };
 
     const sendToWhisper = async (audioBlob) => {
+        chat.current.setApiKey(apiKey);
         const formData = new FormData();
         formData.append("file", audioBlob, "recording.mp3");
         formData.append("model", "whisper-1");
@@ -59,7 +62,7 @@ const Transcriber = () => {
             const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
                 method: 'POST',
                 headers: {
-                    'Authorization': 'Bearer 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'
+                    'Authorization': 'Bearer ' + apiKey
                 },
                 body: formData
             });
@@ -98,6 +101,7 @@ const Transcriber = () => {
 
     return (
         <div className="transcriber-container">
+            <input type="text" value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="Enter your API key" />
             <select value={selectedLang} onChange={(e) => setSelectedLang(e.target.value)}>
                 <option value="en-US">English (US)</option>
                 <option value="ru-RU">Russian</option>

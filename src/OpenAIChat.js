@@ -1,11 +1,15 @@
 export class OpenAIChat {
-    constructor(apiKey, initialSystemMessage = 'You are a helpful assistant during a voice chat.') {
+    constructor(apiKey = '', initialSystemMessage = 'You are a helpful assistant during a voice chat.') {
       this.apiKey = apiKey;
       this.messages = [];
   
       if (initialSystemMessage) {
         this.addSystemMessage(initialSystemMessage);
       }
+    }
+
+    setApiKey(apiKey) {
+        this.apiKey = apiKey;
     }
   
     addSystemMessage(content) {
